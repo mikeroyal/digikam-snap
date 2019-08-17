@@ -1,17 +1,14 @@
 name: digikam
-version: 6.0.0
+version: 6.2.0
 summary:  Advanced digital photo management. 
 description: Makes importing and organizing digital photos a 'snap'.
   
-adopt-info: devmode # use 'strict' once you have the right plugs and slots
-
 grade: stable
 confinement: devmode
 
 architectures:
   - build-on: amd64
-  - build-on: armhf
-  - build-on: arm64
+  
 
 apps:
   digikam:
