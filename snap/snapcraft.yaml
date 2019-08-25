@@ -1,10 +1,11 @@
 name: digikam
-version: 6.2.0
+version: '6.2.0'
 summary:  Advanced digital photo management. 
 description: Makes importing and organizing digital photos a 'snap'.
   
 grade: stable
 confinement: devmode
+base: core18
 
 architectures:
   - build-on: amd64
@@ -44,9 +45,8 @@ digikam:
         -X 'github.com/KDE/digikam/version.GitCommit=$(git rev-list -1 HEAD)' \
         -X 'github.com/KDE/digikam/version.Version=$(git describe --tags --abbrev=0)'" \
         -a -installsuffix cgo -o $SNAPCRAFT_PART_INSTALL/bin/digikam
-    build-snaps:
-      - 
-     build-packages:
+        
+    build-packages:
       - git
       - sed
       - g++
@@ -56,6 +56,7 @@ digikam:
       - libsdl-net1.2-dev
       - libsdl-sound1.2-dev
       - libasound2-dev
+      
     stage-packages:
       - libsdl-sound1.2
       - libsdl-net1.2
